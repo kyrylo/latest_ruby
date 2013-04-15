@@ -1,6 +1,6 @@
 module Latest
-
   class MRI
+
     SOURCE = 'http://ftp.ruby-lang.org/pub/ruby/'
     AVAILABLE_EXTS = ['.tar.gz', '.zip', '.tar.bz2']
 
@@ -21,6 +21,6 @@ module Latest
         source + short_ver + '/' + 'ruby-' + version.to_s + ext
       end
     end
-  end
 
+  end
 end

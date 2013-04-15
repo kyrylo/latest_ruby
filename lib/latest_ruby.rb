@@ -1,6 +1,7 @@
 require_relative 'latest_ruby/ruby'
 require_relative 'latest_ruby/ruby_version'
-require_relative 'latest_ruby/mri'
+require_relative 'latest_ruby/rubies/mri'
+require_relative 'latest_ruby/retrievers/mri_retriever'
 
 module Latest
 

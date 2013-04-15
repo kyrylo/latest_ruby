@@ -1,13 +1,14 @@
 require 'net/http'
 
 module Latest
+  class MRIRetriever
 
-  MRI_RETRIEVER = proc do |mri|
-    page = Net::HTTP.get(URI(mri.source + mri.short_ver + '/'))
-    rubies = page.scan(/
-      (#{ Regexp.escape(mri.short_ver) }\.\d-[a-z0-9]+)\.zip
-    /x).uniq.flatten
-    rubies.map { |ver| RubyVersion.new(ver) }.max
+    def retrieve(mri)
+      page = Net::HTTP.get(URI(mri.source + mri.short_ver + '/'))
+      rubies = page.scan(/
+        (#{ Regexp.escape(mri.short_ver) }\.\d-[a-z0-9]+)\.zip
+      /x).uniq.flatten
+    end
+
   end
-
 end

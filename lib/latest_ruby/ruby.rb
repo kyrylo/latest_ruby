@@ -9,7 +9,11 @@ module Latest
       @ruby = ruby
     end
 
-    def_delegators :@ruby, :version, :link
+    def version
+      @version ||= @ruby.versions.map { |v| RubyVersion.new(v) }.max
+    end
+
+    def_delegators :@ruby, :link
 
   end
 end

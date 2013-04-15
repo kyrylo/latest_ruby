@@ -6,14 +6,14 @@ module Latest
 
     attr_reader :short_ver, :source
 
-    def initialize(short_ver, &retriever)
+    def initialize(short_ver, retriever)
       @short_ver = short_ver
       @retriever = retriever
       @source = SOURCE
     end
 
-    def version
-      @version ||= @retriever.call(self)
+    def versions
+      @retriever.retrieve(self)
     end
 
     def link(ext = '.tar.gz')

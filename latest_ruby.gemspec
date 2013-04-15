@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.files        = `git ls-files`.split("\n")
 
+  s.add_runtime_dependency 'versionomy'
+
   s.add_development_dependency 'bacon'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'pry'

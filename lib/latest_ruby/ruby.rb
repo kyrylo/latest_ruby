@@ -9,6 +9,11 @@ module Latest
       @ruby = ruby
     end
 
+    def filename(ext = nil)
+      name = (ext ? @ruby.link(ext) : @ruby.link)
+      name.split('/').last
+    end
+
     def_delegators :@ruby, :link, :version
 
   end

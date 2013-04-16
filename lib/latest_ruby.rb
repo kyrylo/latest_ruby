@@ -2,8 +2,10 @@ require_relative 'latest_ruby/ruby'
 require_relative 'latest_ruby/ruby_version'
 require_relative 'latest_ruby/rubies/mri'
 require_relative 'latest_ruby/rubies/jruby'
+require_relative 'latest_ruby/rubies/rubinius'
 require_relative 'latest_ruby/retrievers/mri_retriever'
 require_relative 'latest_ruby/retrievers/jruby_retriever'
+require_relative 'latest_ruby/retrievers/rubinius_retriever'
 
 module Latest
 
@@ -32,6 +34,11 @@ module Latest
     def jruby
       Ruby.new(JRuby.new(JRubyRetriever.new))
     end
+
+    def rubinius
+      Ruby.new(Rubinius.new(RubiniusRetriever.new))
+    end
+    alias_method :rbx, :rubinius
   end
 
 end

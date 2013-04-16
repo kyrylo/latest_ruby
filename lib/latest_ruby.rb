@@ -4,10 +4,12 @@ require_relative 'latest_ruby/rubies/mri'
 require_relative 'latest_ruby/rubies/jruby'
 require_relative 'latest_ruby/rubies/rubinius'
 require_relative 'latest_ruby/rubies/maglev'
+require_relative 'latest_ruby/rubies/macruby'
 require_relative 'latest_ruby/retrievers/mri_retriever'
 require_relative 'latest_ruby/retrievers/jruby_retriever'
 require_relative 'latest_ruby/retrievers/rubinius_retriever'
 require_relative 'latest_ruby/retrievers/maglev_retriever'
+require_relative 'latest_ruby/retrievers/macruby_retriever'
 
 module Latest
 
@@ -44,6 +46,10 @@ module Latest
 
     def maglev
       Ruby.new(MagLev.new(MagLevRetriever.new))
+    end
+
+    def macruby
+      Ruby.new(MacRuby.new(MacRubyRetriever.new))
     end
   end
 

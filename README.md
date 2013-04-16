@@ -8,7 +8,7 @@ Description
 
 The purpose of this library is to answer a simple but capacious question: “What
 is the latest version of Ruby now?”. It can also be asked for the latest
-versions of Rubinius, JRuby, MagLev, MacRuby, Cardinal, IronRuby and Topaz.
+versions of Rubinius, JRuby, MagLev, MacRuby.
 
 Installation
 ------------
@@ -27,47 +27,29 @@ Let's find out the latest versions of Rubies.
 
 ```ruby
 # MRI 2.0
-Latest.ruby #=> #<Ruby:...>
+Latest.ruby.version.to_s #=> "2.0.0-p0"
 # The same.
-Latest.ruby20
+Latest.ruby20.version.to_s
 
 # MRI 1.9
-Latest.ruby19 #=> #<Ruby:...>
+Latest.ruby19.version.to_s #=> "1.9.3-p392"
 
 # MRI 1.8
-Latest.ruby18 #=> #<Ruby:...>
+Latest.ruby18.version.to_s #=> "1.8.7-p371"
 
 # JRuby.
-Latest.jruby #=> #<Ruby:...>
+Latest.jruby.version.to_s #=> "1.7.3"
 
 # Rubinius.
-Latest.rubinius #=> #<Ruby:...>
+Latest.rubinius.version.to_s #=> "1.2.4"
 # The same.
-Latest.rbx
+Latest.rbx.version.to_s
 
 # MagLev
-Latest.maglev #=> #<Ruby:...>
-
-# Cardinal
-Latest.cardinal #=> #<Ruby:...>
+Latest.maglev.version.to_s #=> "1.0.0"
 
 # MacRuby
-Latest.macruby #=> #<Ruby:...>
-
-# IronRuby
-Latest.ironruby #=> #<Ruby:...>
-
-# Topaz
-Latest.topaz #=> #<Ruby:...>
-```
-
-So, what's that “Ruby” object that it returns? It's merely an object with a
-bunch of information about a Ruby.
-
-```ruby
-Latest.ruby.version #=> "2.0.0"
-Latest.ruby.patchlevel #=> "p0"
-Latest.ruby.full_version #=> "2.0.0-p0"
+Latest.macruby.version.to_s #=> "0.12"
 ```
 
 Latest Ruby also provides one useful (well, it's useful for me, at least) way to
@@ -76,10 +58,10 @@ retrieve a download link for a Ruby.
 ```ruby
 Latest.ruby.link #=> "http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz"
 # The same.
-Latest.ruby.link(:gz) #=> "http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz"
+Latest.ruby.link('.tar.gz') #=> "http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz"
 
-Latest.ruby.link(:bz2) #=> "http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.bz2"
-Latest.ruby.link(:zip) #=> "http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.zip"
+Latest.ruby.link('.tar.bz2') #=> "http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.bz2"
+Latest.ruby.link('.zip') #=> "http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.zip"
 ```
 
 Limitations
@@ -94,10 +76,8 @@ Latest Ruby is a cross-platform library.
 * Ruby 1.9.3 and higher
 
 Please, ping me, if you need support for other Ruby implementations. Or, if you
-prefer, send a pull request.
-
-Credits
--------
+prefer, send a pull request. Currently, the library is unbelievably simple.
+Ideas and suggestions are welcome (just file issues).
 
 Licence
 -------

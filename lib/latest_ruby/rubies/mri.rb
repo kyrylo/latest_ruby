@@ -12,13 +12,13 @@ module Latest
       @source = SOURCE
     end
 
-    def versions
-      @retriever.retrieve(self)
+    def version
+      @version ||= @retriever.retrieve(self)
     end
 
     def link(ext = '.tar.gz')
       if AVAILABLE_EXTS.include?(ext)
-        source + short_ver + '/' + 'ruby-' + version.to_s + ext
+        source + short_ver + '/ruby-' + version.to_s + ext
       end
     end
 

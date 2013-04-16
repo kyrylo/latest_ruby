@@ -14,7 +14,7 @@ module Latest
       @version <=> other.instance_variable_get(:@version)
     end
 
-    def_delegators :@version, :to_s, :patchlevel
+    def_delegators :@version, :to_s
 
     private
 

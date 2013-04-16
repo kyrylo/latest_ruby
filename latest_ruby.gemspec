@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version      = File.read('VERSION')
   s.date         = Time.now.strftime('%Y-%m-%d')
   s.summary      = 'Answers the question of what the latest Ruby version is'
-  s.description  = 'Knows about MRI, Rubinius, JRuby, MagLev, MacRuby, Cardinal, IronRuby and Topaz.'
+  s.description  = 'Knows about MRI, Rubinius, JRuby, MagLev and MacRuby.'
   s.author       = 'Kyrylo Silin'
   s.email        = 'kyrylosilin@gmail.com'
   s.homepage     = 'https://github.com/kyrylo/latest_ruby'

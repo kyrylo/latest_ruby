@@ -1,3 +1,4 @@
+require 'net/http'
 require_relative 'latest_ruby/ruby'
 require_relative 'latest_ruby/ruby_version'
 require_relative 'latest_ruby/rubies/mri'

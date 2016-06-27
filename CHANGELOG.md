@@ -1,6 +1,10 @@
 Latest Ruby changelog
 =====================
 
+### v0.0.5 (June 27, 2016)
+
+* Added support for Ruby 2.3
+
 ### v0.0.4 (January 12, 2015)
 
 * Add support for Ruby 2.2

@@ -1,5 +1,4 @@
 require 'forwardable'
-require 'versionomy'
 
 module Latest
   class RubyVersion
@@ -19,7 +18,7 @@ module Latest
     private
 
     def get_version(ver)
-      Versionomy.parse(ver)
+      Gem::Version.new(ver)
     end
 
   end

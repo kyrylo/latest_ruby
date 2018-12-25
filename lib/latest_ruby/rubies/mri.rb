@@ -1,8 +1,7 @@
 module Latest
   class MRI
-
-    SOURCE = 'http://ftp.ruby-lang.org/pub/ruby/'
-    AVAILABLE_EXTS = ['.tar.gz', '.zip', '.tar.bz2']
+    SOURCE = 'http://ftp.ruby-lang.org/pub/ruby/'.freeze
+    AVAILABLE_EXTS = ['.tar.gz', '.zip', '.tar.bz2'].freeze
 
     attr_reader :short_ver, :source
 
@@ -17,10 +16,10 @@ module Latest
     end
 
     def link(ext = '.tar.gz')
-      if AVAILABLE_EXTS.include?(ext)
-        source + short_ver + '/ruby-' + version.to_s + ext
-      end
-    end
+      return unless AVAILABLE_EXTS.include?(ext)
 
+      ver = version.prerelease? ? version.to_s.gsub('.pre.', '-') : version.to_s
+      "#{source}#{short_ver}/ruby-#{ver}#{ext}"
+    end
   end
 end

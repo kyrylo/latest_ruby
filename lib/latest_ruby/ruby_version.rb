@@ -2,6 +2,7 @@ require 'forwardable'
 
 module Latest
   class RubyVersion
+
     extend Forwardable
 
     def initialize(version)
@@ -12,12 +13,13 @@ module Latest
       @version <=> other.instance_variable_get(:@version)
     end
 
-    def_delegators :@version, :to_s, :prerelease?
+    def_delegators :@version, :to_s
 
     private
 
     def get_version(ver)
       Gem::Version.new(ver)
     end
+
   end
 end

@@ -1,6 +1,11 @@
 Latest Ruby changelog
 =====================
 
+### v2.0.0 (December 24, 2019)
+
+* Added support for Ruby 2.7
+  ([#14](https://github.com/kyrylo/latest_ruby/pull/14))
+
 ### v1.0.0 (December 24, 2018)
 
 * Added support for Ruby 2.6

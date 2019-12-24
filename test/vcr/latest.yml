@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ftp.ruby-lang.org/pub/ruby/2.6/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - ftp.ruby-lang.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Content-Type:
+      - text/html;charset=utf-8
+      Cache-Control:
+      - public, max-age=3600
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Via:
+      - 1.1 varnish
+      - 1.1 vegur
+      Fastly-Restarts:
+      - '2'
+      Content-Length:
+      - '3319'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 25 Dec 2018 13:04:43 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-nrt6138-NRT
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1545743081.965179,VS0,VE2161
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset='utf-8'>\n    <title>pub/ruby/2.6/</title>\n<style>\nbody
+        {\n  font-family: monospace;\n  font-size: 14px;\n}\nul {\n  list-style-type:
+        none;\n}\n</style>\n  </head>\n  <body>\n    <h4>pub/ruby/2.6/</h4>\n    <ul>\n
+        \   </ul>\n    <ul>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview1.tar.bz2\">ruby-2.6.0-preview1.tar.bz2</a>
+        14104578 2018-02-26T06:11:09.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview1.tar.gz\">ruby-2.6.0-preview1.tar.gz</a>
+        16082501 2018-02-26T06:11:10.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview1.tar.xz\">ruby-2.6.0-preview1.tar.xz</a>
+        11423984 2018-02-26T06:11:09.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview1.zip\">ruby-2.6.0-preview1.zip</a>
+        19807007 2018-02-26T06:11:10.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview2.tar.bz2\">ruby-2.6.0-preview2.tar.bz2</a>
+        14209461 2018-06-13T06:51:19.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview2.tar.gz\">ruby-2.6.0-preview2.tar.gz</a>
+        16170732 2018-06-13T06:51:19.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview2.tar.xz\">ruby-2.6.0-preview2.tar.xz</a>
+        11525372 2018-06-13T06:51:19.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview2.zip\">ruby-2.6.0-preview2.zip</a>
+        19850776 2018-06-13T06:51:21.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview3.tar.bz2\">ruby-2.6.0-preview3.tar.bz2</a>
+        14973451 2018-11-06T15:34:08.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview3.tar.gz\">ruby-2.6.0-preview3.tar.gz</a>
+        17071670 2018-11-06T15:34:19.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview3.tar.xz\">ruby-2.6.0-preview3.tar.xz</a>
+        12291692 2018-11-06T15:34:30.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-preview3.zip\">ruby-2.6.0-preview3.zip</a>
+        21537655 2018-11-06T15:34:51.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-rc1.tar.bz2\">ruby-2.6.0-rc1.tar.bz2</a>
+        14607078 2018-12-06T16:33:18.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-rc1.tar.gz\">ruby-2.6.0-rc1.tar.gz</a>
+        16823448 2018-12-06T16:33:38.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-rc1.tar.xz\">ruby-2.6.0-rc1.tar.xz</a>
+        11851908 2018-12-06T16:34:03.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-rc1.zip\">ruby-2.6.0-rc1.zip</a>
+        20737499 2018-12-06T16:34:13.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-rc2.tar.bz2\">ruby-2.6.0-rc2.tar.bz2</a>
+        14581998 2018-12-15T12:16:22.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-rc2.tar.gz\">ruby-2.6.0-rc2.tar.gz</a>
+        16723556 2018-12-15T12:16:43.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-rc2.tar.xz\">ruby-2.6.0-rc2.tar.xz</a>
+        11908088 2018-12-15T12:17:04.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0-rc2.zip\">ruby-2.6.0-rc2.zip</a>
+        20643747 2018-12-15T12:17:13.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0.tar.bz2\">ruby-2.6.0.tar.bz2</a>
+        14585856 2018-12-25T07:34:16.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0.tar.gz\">ruby-2.6.0.tar.gz</a>
+        16687800 2018-12-25T07:34:38.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0.tar.xz\">ruby-2.6.0.tar.xz</a>
+        11918536 2018-12-25T07:34:46.000Z</li>\n        <li><a href=\"/pub/ruby/2.6/ruby-2.6.0.zip\">ruby-2.6.0.zip</a>
+        20582054 2018-12-25T07:34:56.000Z</li>\n    </ul>\n  </body>\n</html>\n\n
+        \   \n"
+    http_version: 
+  recorded_at: Tue, 25 Dec 2018 13:04:43 GMT
+recorded_with: VCR 4.0.0

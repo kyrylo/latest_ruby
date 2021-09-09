@@ -1,6 +1,13 @@
 Latest Ruby changelog
 =====================
 
+### v3.0.2 (September 9, 2021)
+
+* Fixed support for Rubinius
+  ([#19](https://github.com/kyrylo/latest_ruby/pull/19))
+* Dropped `rexml` dependency
+  ([#19](https://github.com/kyrylo/latest_ruby/pull/19))
+
 ### v3.0.1 (December 31, 2020)
 
 * Fixed support for Ruby 3.0

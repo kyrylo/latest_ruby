@@ -1,23 +1,23 @@
 module Latest
   class Rubinius
-
-    SOURCE = 'http://asset.rubini.us/'
-    AVAILABLE_EXTS = ['.tar.gz']
+    WEB_SOURCE = 'https://api.github.com/repos/rubinius/rubinius/releases/latest'
+    SOURCE = 'https://github.com/rubinius/rubinius/releases/download'
+    AVAILABLE_EXTS = ['.tar.bz2']
 
     attr_reader :source
 
     def initialize(retriever)
       @retriever = retriever
-      @source = SOURCE
+      @source = WEB_SOURCE
     end
 
     def version
       @version ||= @retriever.retrieve(self)
     end
 
-    def link(ext = '.tar.gz')
+    def link(ext = '.tar.bz2')
       if AVAILABLE_EXTS.include?(ext)
-        source + 'rubinius-' + version.to_s + ext
+        "#{SOURCE}/v#{version}/rubinius-#{version}#{ext}"
       end
     end
 

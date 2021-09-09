@@ -12,8 +12,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.files        = `git ls-files`.split("\n")
 
-  s.add_dependency 'rexml'
-
   s.add_development_dependency 'rake'
   s.add_development_dependency 'pry'
 end

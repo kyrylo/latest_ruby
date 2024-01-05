@@ -1,6 +1,11 @@
 Latest Ruby changelog
 =====================
 
+### v3.3.0 (January 5, 2024)
+
+ * Added support for Ruby 3.3
+   ([#26](https://github.com/kyrylo/latest_ruby/pull/26))
+
 ### v3.2.0 (December 29, 2022)
 
 * Added support for Ruby 3.2

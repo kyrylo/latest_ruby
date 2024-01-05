@@ -21,6 +21,10 @@ module Latest
     File.read(VERSION_FILE).chomp : '(could not find VERSION file)'
 
   class << self
+    def ruby33
+      Ruby.new(MRI.new('3.3', MRIRetriever.new))
+    end
+
     def ruby32
       Ruby.new(MRI.new('3.2', MRIRetriever.new))
     end
@@ -46,7 +50,7 @@ module Latest
     end
 
     # The latest Ruby version by default.
-    alias_method :ruby, :ruby32
+    alias_method :ruby, :ruby33
 
     def ruby24
       Ruby.new(MRI.new('2.4', MRIRetriever.new))
